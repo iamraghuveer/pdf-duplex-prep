@@ -4,17 +4,20 @@ Merge multiple PDFs and split them into two print-ready files for manual duplex 
 
 Each input PDF is guaranteed to start on an odd page. If needed, a blank page is automatically inserted so every document begins on the front of a fresh sheet.
 
+## Installation
+
+```bash
+pip install pdf-duplex-prep
+```
+
 ## Usage
 
 ```bash
-# Reads all PDFs from ./files/, sorted by name
-python main.py
-
-# Reads all PDFs from a specific folder, sorted by name
-python main.py --dir path/to/folder
+# All PDFs in the current folder, sorted by name
+pdf-duplex-prep --dir path/to/folder
 
 # Explicit files in a specific order
-python main.py doc1.pdf doc2.pdf doc3.pdf
+pdf-duplex-prep doc1.pdf doc2.pdf doc3.pdf
 ```
 
 ### Output
@@ -37,19 +40,3 @@ Two files are written to the input folder:
    > Run a test with 4 pages first to confirm your printer's behaviour.
 4. Return the flipped stack to the input tray
 5. Print `print_2_even.pdf` (all even sides)
-
-## Setup
-
-Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/).
-
-```bash
-uv sync
-uv run python main.py --dir path/to/your/pdfs
-```
-
-Or with plain pip:
-
-```bash
-pip install pypdf
-python main.py --dir path/to/your/pdfs
-```
