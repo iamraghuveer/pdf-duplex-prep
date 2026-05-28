@@ -46,4 +46,4 @@ git tag v0.1.0
 git push origin v0.1.0
 ```
 
-Requires a `pypi` environment configured in GitHub with trusted publishing (OIDC) enabled on PyPI for this repo.
+Requires trusted publishing (OIDC) configured on PyPI for this repo, with workflow filename `publish.yml` and no environment name.
