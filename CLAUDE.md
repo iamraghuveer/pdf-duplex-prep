@@ -46,4 +46,7 @@ git tag v0.1.0
 git push origin v0.1.0
 ```
 
-Requires trusted publishing (OIDC) configured on PyPI for this repo, with workflow filename `publish.yml` and no environment name.
+Requires trusted publishing (OIDC) configured on PyPI for this repo:
+- Repository: `iamraghuveer/pdf-duplex-prep`
+- Workflow: `publish.yml`
+- Environment name: `pypi`
