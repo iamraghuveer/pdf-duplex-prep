@@ -1,6 +1,6 @@
 [project]
 name = "pdf-duplex-prep"
-version = "0.1.1"
+version = "0.1.2"
 description = "Merge PDFs and split them into two files for manual duplex printing on simplex printers"
 readme = "README.md"
 requires-python = ">=3.12"
