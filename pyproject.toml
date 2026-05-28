@@ -1,0 +1,48 @@
+[project]
+name = "pdf-duplex-prep"
+version = "0.1.0"
+description = "Merge PDFs and split them into two files for manual duplex printing on simplex printers"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "iamraghuveer", email = "1025486+iamraghuveer@users.noreply.github.com" },
+]
+keywords = ["pdf", "duplex", "printing", "merge"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Printing",
+]
+dependencies = [
+  "pypdf>=6.10.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/iamraghuveer/pdf-duplex-prep"
+Repository = "https://github.com/iamraghuveer/pdf-duplex-prep"
+
+[project.scripts]
+pdf-duplex-prep = "pdf_duplex_prep:main"
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.2.0",
+  "pytest>=8.3.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
